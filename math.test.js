@@ -1,9 +1,11 @@
-const { add, multiply } = require('./math');
+const math = require('./math');
 
-test('adds 1 + 2 to equal 3', () => {
-  expect(add(1, 2)).toBe(4); // WRONG! Should be 3
-});
+describe('Math functions', () => {
+  test('adds 1 + 2 to equal 3', () => {
+    expect(math.add(1, 2)).toBe(3);
+  });
 
-test('multiplies 2 * 3 to equal 6', () => {
-  expect(multiply(2, 3)).toBe(5); // WRONG! Should be 6
+  test('multiplies 2 * 3 to equal 6', () => {
+    expect(math.multiply(2, 3)).toBe(6);
+  });
 });
